@@ -37,6 +37,29 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			<plugin>
+				<groupId>org.jvnet.jaxb2.maven2</groupId>
+				<artifactId>maven-jaxb2-plugin</artifactId>
+				<version>0.14.0</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+						<configuration>
+							<schemaLanguage>WSDL</schemaLanguage>
+							<generatePackage>com.example.consumingwebservice.wsdl</generatePackage>
+							<schemas>
+								<schema>
+									<url>http://desktop-4j91tvb.mshome.net:9300/p2pd/servlet/dispatch?wsdl</url>
+								</schema>
+							</schemas>
+							<bindingDirectory>${project.basedir}/src/main/resources</bindingDirectory>
+							<bindingIncludes>binding.xjb</bindingIncludes>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
 

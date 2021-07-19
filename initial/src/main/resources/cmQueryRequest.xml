@@ -1,0 +1,27 @@
+<ns1:query xmlns:ns1="http://developer.cognos.com/schemas/contentManagerService/1">
+	<searchPath xsi:type="ns2:searchPathMultipleObject" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns2="http://developer.cognos.com/schemas/bibus/3/">/content/folder[@name='test']/exploration[@name='example']</searchPath>
+	<properties soapenc:arrayType="ns3:propEnumArray[6]" xsi:type="soapenc:Array" xmlns:ns3="http://developer.cognos.com/schemas/bibus/3/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+		<properties xsi:type="ns3:propEnum">defaultName</properties>
+		<properties xsi:type="ns3:propEnum">searchPath</properties>
+		<properties xsi:type="ns3:propEnum">objectClass</properties>
+		<properties xsi:type="ns3:propEnum">definition</properties>
+		<properties xsi:type="ns3:propEnum">specification</properties>
+		<properties xsi:type="ns3:propEnum">references</properties>
+	</properties>
+	<sortBy soapenc:arrayType="ns4:sortArray[1]" xsi:type="soapenc:Array" xmlns:ns4="http://developer.cognos.com/schemas/bibus/3/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+		<sortBy xsi:type="ns4:sort">
+			<order xsi:type="ns4:orderEnum">ascending</order>
+			<propName xsi:type="ns4:propEnum">defaultName</propName>
+		</sortBy>
+	</sortBy>
+	<options xsi:type="ns5:queryOptions" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns5="http://developer.cognos.com/schemas/bibus/3/">
+		<dataEncoding xsi:type="ns5:encodingEnum" xsi:nil="true"/>
+		<maxDataBytes xsi:type="xsd:integer" xsi:nil="true" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		<maxObjects xsi:type="xsd:integer" xsi:nil="true" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		<permission xsi:type="xsd:string" xsi:nil="true" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		<refProps xsi:type="ns5:refProp" xsi:nil="true"/>
+		<schemaInfo xsi:type="xsd:boolean" xmlns:xsd="http://www.w3.org/2001/XMLSchema">false</schemaInfo>
+		<skipDataBytes xsi:type="xsd:integer" xsi:nil="true" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		<skipObjects xsi:type="xsd:integer" xsi:nil="true" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+	</options>
+</ns1:query>
