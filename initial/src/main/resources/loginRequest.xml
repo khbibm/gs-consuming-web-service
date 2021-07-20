@@ -1,0 +1,168 @@
+<ns1:logon xmlns:ns1="http://developer.cognos.com/schemas/contentManagerService/1">
+	<credentials xsi:type="ns2:xmlEncodedXML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns2="http://developer.cognos.com/schemas/bibus/3/">
+		&lt;credential&gt;
+			&lt;namespace&gt;CognosEx&lt;/namespace&gt;
+			&lt;username&gt;kelly&lt;/username&gt;
+			&lt;password&gt;CognosCognosCognos!1&lt;/password&gt;
+		&lt;/credential&gt;
+	</credentials>
+	<roles soapenc:arrayType="ns3:searchPathSingleObjectArray[0]" xsi:type="soapenc:Array" xmlns:ns3="http://developer.cognos.com/schemas/bibus/3/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+</ns1:logon>
+
+
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"><SOAP-ENV:Header/><SOAP-ENV:Body>
+<logon xmlns:ns3="http://developer.cognos.com/schemas/bibus/3/" xmlns:ns4="http://schemas.xmlsoap.org/soap/encoding/">
+	<credentials>
+		&lt;credential&gt;
+			&lt;namespace&gt;CognosEx&lt;/namespace&gt;
+			&lt;username&gt;kelly&lt;/username&gt;
+			&lt;password&gt;CognosCognosCognos!1&lt;/password&gt;
+		&lt;/credential&gt;
+	</credentials>
+</logon>
+</SOAP-ENV:Body></SOAP-ENV:Envelope>
+
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<soapenv:Header>
+	<ns1:biBusHeader soapenv:actor="http://schemas.xmlsoap.org/soap/actor/next" soapenv:mustUnderstand="0" xsi:type="ns1:biBusHeader" xmlns:ns1="http://developer.cognos.com/schemas/bibus/3/">
+		<CAF xsi:type="ns1:CAF" xsi:nil="true"/>
+		<CAM xsi:type="ns1:CAM">
+			<action xsi:type="xsd:string" xsi:nil="true"/>
+			<authenticityToken xsi:type="xsd:base64Binary" xsi:nil="true"/>
+			<CAMCredentialPath xsi:type="xsd:string" xsi:nil="true"/>
+			<CAMPassport xsi:type="ns1:CAMPassport" xsi:nil="true"/>
+			<exception xsi:type="ns1:CAMException">
+				<errorCode xsi:type="xsd:string">-36</errorCode>
+				<errorCodeString xsi:type="xsd:string">camAuthUserRecoverable</errorCodeString>
+				<messages soapenc:arrayType="ns1:message[0]" xsi:type="soapenc:Array" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"/>
+				<promptInfo xsi:type="ns1:promptInfo">
+					<captions soapenc:arrayType="xsd:string[1]" xsi:type="soapenc:Array" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+						<captions xsi:type="xsd:string">Please type your credentials for authentication.</captions>
+					</captions>
+					<displayObjects soapenc:arrayType="ns1:displayObject[5]" xsi:type="soapenc:Array" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+						<displayObjects xsi:type="ns1:displayObject">
+							<caption xsi:type="xsd:string" xsi:nil="true"/>
+							<name xsi:type="xsd:string">CAMNamespace</name>
+							<promptOptions xsi:type="ns1:promptOption" xsi:nil="true"/>
+							<type xsi:type="xsd:string">hidden</type>
+							<value xsi:type="xsd:string">CognosEx</value>
+						</displayObjects>
+						<displayObjects xsi:type="ns1:displayObject">
+							<caption xsi:type="xsd:string">Namespace:</caption>
+							<name xsi:type="xsd:string">CAMNamespaceDisplayName</name>
+							<promptOptions xsi:type="ns1:promptOption" xsi:nil="true"/>
+							<type xsi:type="xsd:string">display</type>
+							<value xsi:type="xsd:string">Cognos Users</value>
+						</displayObjects>
+						<displayObjects xsi:type="ns1:displayObject">
+							<caption xsi:type="xsd:string">User ID:</caption>
+							<name xsi:type="xsd:string">CAMUsername</name>
+							<promptOptions xsi:type="ns1:promptOption" xsi:nil="true"/>
+							<type xsi:type="xsd:string">text</type>
+							<value xsi:type="xsd:string" xsi:nil="true"/>
+						</displayObjects>
+							<displayObjects xsi:type="ns1:displayObject">
+							<caption xsi:type="xsd:string">Password:</caption>
+							<name xsi:type="xsd:string">CAMPassword</name>
+							<promptOptions xsi:type="ns1:promptOption" xsi:nil="true"/>
+							<type xsi:type="xsd:string">textnoecho</type>
+							<value xsi:type="xsd:string" xsi:nil="true"/>
+						</displayObjects>
+						<displayObjects xsi:type="ns1:displayObject">
+							<caption xsi:type="xsd:string" xsi:nil="true"/>
+							<name xsi:type="xsd:string">h_CAM_action</name>
+							<promptOptions xsi:type="ns1:promptOption" xsi:nil="true"/>
+							<type xsi:type="xsd:string">hidden</type>
+							<value xsi:type="xsd:string">logonAs</value>
+						</displayObjects>
+					</displayObjects>
+					<securityBlob xsi:type="xsd:base64Binary" xsi:nil="true"/>
+				</promptInfo>
+				<severity xsi:type="ns1:severityEnum">error</severity>
+			</exception>
+			<roles xsi:type="xsd:string" xsi:nil="true"/>
+			<securityBlob xsi:type="xsd:base64Binary" xsi:nil="true"/>
+			<settings xsi:type="ns1:CAMSettings" xsi:nil="true"/>
+			<userSessionID xsi:type="xsd:base64Binary" xsi:nil="true"/>
+		</CAM>
+		<CAMProtect xsi:type="ns1:CAMProtect" xsi:nil="true"/>
+		<dispatcherTransportVars soapenc:arrayType="ns1:dispatcherTransportVar[1]" xsi:type="soapenc:Array" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+			<dispatcherTransportVars xsi:type="ns1:dispatcherTransportVar">
+				<name xsi:type="xsd:string">html</name>
+				<value xsi:type="xsd:string">false</value>
+			</dispatcherTransportVars>
+		</dispatcherTransportVars>
+		<extension xsi:type="ns1:biBusHeaderExtension1" xsi:nil="true"/>
+		<hdrSession xsi:type="ns1:hdrSession">
+			<cookieVars xsi:type="ns1:cookieVar" xsi:nil="true"/>
+			<environmentVars soapenc:arrayType="ns1:environmentVar[2]" xsi:type="soapenc:Array" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+				<environmentVars xsi:type="ns1:environmentVar">
+					<name xsi:type="xsd:string">ORIGINAL_CONTENT_LENGTH</name>
+					<value xsi:type="xsd:string">8022</value>
+				</environmentVars>
+				<environmentVars xsi:type="ns1:environmentVar">
+					<name xsi:type="xsd:string">WEB_CONTENT_ROOT</name>
+					<value xsi:type="xsd:string">/p2pd</value>
+				</environmentVars>
+			</environmentVars>
+			<formFieldVars soapenc:arrayType="ns1:formFieldVar[0]" xsi:type="soapenc:Array" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"/>
+			<setCookieVars soapenc:arrayType="ns1:setCookieVar[0]" xsi:type="soapenc:Array" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"/>
+		</hdrSession>
+		<providers xsi:type="ns1:provider" xsi:nil="true"/>
+		<routing xsi:type="ns1:routingInfo" xsi:nil="true"/>
+		<tracking xsi:type="ns1:tracking"><conversationContext xsi:type="ns1:conversationContext" xsi:nil="true"/>
+			<hopCount xsi:type="xsd:integer">7</hopCount>
+			<providers soapenc:arrayType="ns1:provider[1]" xsi:type="soapenc:Array" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+				<providers xsi:type="ns1:provider">
+					<build xsi:type="xsd:string">11.2</build>
+					<name xsi:type="xsd:string">cm</name>
+					<patch xsi:type="xsd:int">1</patch>
+				</providers>
+			</providers>
+			<requestContext xsi:type="xsd:string">qdCdMvwqlw4hCdG8yhqvG8hhs9C84h2hlyjy8hd8</requestContext>
+			<sessionContext xsi:type="xsd:string">f:0:null</sessionContext>
+			<stepContext xsi:type="xsd:string" xsi:nil="true"/>
+		</tracking>
+		<userCapabilityCache xsi:type="ns1:userCapabilityCache" xsi:nil="true"/>
+		<userPreferenceVars soapenc:arrayType="ns1:userPreferenceVar[19]" xsi:type="soapenc:Array" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+			<userPreferenceVars xsi:type="ns1:userPreferenceVar">
+				<name xsi:type="xsd:string">showHints</name>
+				<value xsi:type="xsd:string">showAll</value>
+			</userPreferenceVars>
+		</userPreferenceVars>
+	</ns1:biBusHeader>
+</soapenv:Header>
+<soapenv:Body>
+	<ns2:logon soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:ns2="http://developer.cognos.com/schemas/contentManagerService/1"><credentials xsi:type="ns3:xmlEncodedXML" xmlns:ns3="http://developer.cognos.com/schemas/bibus/3/">&lt;credential&gt;&lt;namespace&gt;CognosEx&lt;/namespace&gt;&lt;username&gt;kelly&lt;/username&gt;&lt;password&gt;CognosCognosCognos!1&lt;/password&gt;&lt;/credential&gt;</credentials><roles soapenc:arrayType="ns4:searchPathSingleObject[0]" xsi:type="soapenc:Array" xmlns:ns4="http://developer.cognos.com/schemas/bibus/3/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"/></ns2:logon></soapenv:Body></soapenv:Envelope>
+	
+	
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+<SOAP-ENV:Header>
+	<ns3:biBusHeader xmlns:ns3="http://developer.cognos.com/schemas/bibus/3/" xmlns:ns4="http://schemas.xmlsoap.org/soap/encoding/">
+		<ns3:CAM>
+			<ns3:action>logonAs</ns3:action>
+		</ns3:CAM>
+		<ns3:hdrSession>
+		<ns3:formFieldVars>
+			<ns3:formFieldVar>
+				<ns3:format>not_encrypted</ns3:format>
+				<ns3:name>CAMNamespace</ns3:name>
+				<ns3:value>CognosEx</ns3:value>
+			</ns3:formFieldVar>
+			<ns3:formFieldVar>
+				<ns3:format>not_encrypted</ns3:format>
+				<ns3:name>CAMUsername</ns3:name>
+				<ns3:value>kelly</ns3:value>
+			</ns3:formFieldVar>
+			<ns3:formFieldVar>
+				<ns3:format>not_encrypted</ns3:format>
+				<ns3:name>CAMPassword</ns3:name>
+				<ns3:value>CognosCognosCognos!1</ns3:value>
+			</ns3:formFieldVar>
+		</ns3:formFieldVars>
+	</ns3:hdrSession>
+</ns3:biBusHeader>
+</SOAP-ENV:Header>
+<SOAP-ENV:Body/>
+</SOAP-ENV:Envelope>
