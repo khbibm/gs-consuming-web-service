@@ -22,7 +22,7 @@ repositories {
 task genJaxb {
 	ext.sourcesDir = "${buildDir}/generated-sources/jaxb"
 	ext.classesDir = "${buildDir}/classes/jaxb"
-	ext.schema = "http://localhost:8080/ws/countries.wsdl"
+	ext.schema = "http://desktop-4j91tvb.mshome.net:9300/p2pd/servlet/dispatch?wsdl"
 
 	outputs.dir classesDir
 
@@ -33,23 +33,23 @@ task genJaxb {
 			mkdir(dir: sourcesDir)
 			mkdir(dir: classesDir)
 
-				xjc(destdir: sourcesDir, schema: schema,
-						package: "com.example.consumingwebservice.wsdl") {
-						arg(value: "-wsdl")
-					produces(dir: sourcesDir, includes: "**/*.java")
-				}
+			xjc(destdir: sourcesDir, schema: schema,
+					package: "com.example.consumingwebservice.wsdl") {
+				arg(value: "-wsdl")
+				produces(dir: sourcesDir, includes: "**/*.java")
+			}
 
-				javac(destdir: classesDir, source: 1.8, target: 1.8, debug: true,
-						debugLevel: "lines,vars,source",
-						classpath: configurations.jaxb.asPath) {
-					src(path: sourcesDir)
-					include(name: "**/*.java")
-					include(name: "*.java")
-					}
+			javac(destdir: classesDir, source: 1.8, target: 1.8, debug: true,
+					debugLevel: "lines,vars,source",
+					classpath: configurations.jaxb.asPath) {
+				src(path: sourcesDir)
+				include(name: "**/*.java")
+				include(name: "*.java")
+			}
 
-				copy(todir: classesDir) {
-						fileset(dir: sourcesDir, erroronmissingdir: false) {
-						exclude(name: "**/*.java")
+			copy(todir: classesDir) {
+				fileset(dir: sourcesDir, erroronmissingdir: false) {
+					exclude(name: "**/*.java")
 				}
 			}
 		}
